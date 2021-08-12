@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="{firstName}" path="/api/v1/user/{id}" id="5abd985e-a0b4-4417-86b2-520d9c983450" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5abd985e-a0b4-4417-86b2-520d9c983450fileName">%7BfirstName%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value>firstName</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>firstName</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="UpdateMethod" id="58b20fe8-3e28-48a3-a25e-0ea789c3b9b3" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="UpdateUser" id="3ef2e8f1-571b-44d3-9a83-ca25972ae2c0" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://www.test-insurance.com/api/v1/user/200</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Bearer Token</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value="400"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

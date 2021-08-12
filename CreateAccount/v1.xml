@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="v1" path="/api/v1/user/{id}" id="110b4c01-af02-4fc2-b5a9-316057d12caa" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="110b4c01-af02-4fc2-b5a9-316057d12caafileName">v1</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value>100</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>100</con:default>
+      <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getMethod" id="a12200b0-7896-4251-9606-0ce961bc8621" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="getUser" id="6c2edbfb-0646-40aa-b772-b7db6b6baf69" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://www.test-insurance.com/api/v1/user</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Bearer Token</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value="200"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

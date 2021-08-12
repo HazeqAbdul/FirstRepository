@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/v1/user/" path="{id}" id="2392d2ef-3b52-4617-86e2-c52ca0a9ce72" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2392d2ef-3b52-4617-86e2-c52ca0a9ce72fileName">%2Fapi%2Fv1%2Fuser%2F</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+      <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Method 1" id="6428f002-180d-4459-8e32-537ba37dbb26" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="a80dc4f9-11e9-4c57-9342-9a5800944269" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="545b1984-e9a5-46f9-bfba-d9bf6837ef6d" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="75a062fd-e4c0-45f6-9b52-d50fffcc0aa8" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Bearer Token</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

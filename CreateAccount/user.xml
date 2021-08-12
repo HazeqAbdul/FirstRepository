@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="user" path="/api/v1/user" id="d6299165-2e67-4186-93ec-2a0719a545c3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d6299165-2e67-4186-93ec-2a0719a545c3fileName">user</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>firstName</con:name>
+      <con:style>TEMPLATE</con:style>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="postMethod" id="f38b61bc-9d37-4348-87dd-e3df3fc0989c" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="CreateUserRequest" id="0b06ecdd-c678-4437-8254-cf86e6f40121" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request>{
+  "primaryPerson": {
+    "email": "",
+    "title": "",
+    "firstName": "",
+    "lastName": "",
+    "gender": "",
+    "maritalStatus": "",
+    "employmentStatus": "",
+    "dateOfBirth": "",
+    "languagePref": "en"
+  },
+  "primaryPersonMailingAddress": {
+    "addressType": "",
+    "addressLine1": "",
+    "city": "",
+    "state": "",
+    "postalCode": "",
+    "countryCode": ""
+  },
+  "primaryPersonPhone": {
+    "phoneNumber": "",
+    "phoneExtension": "",
+    "phoneTime": "",
+    "phoneType": ""
+  }
+}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>firstName</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

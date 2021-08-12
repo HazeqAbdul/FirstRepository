@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="" path="" id="f570ad69-db0c-4bcb-99ed-698185ad961e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f570ad69-db0c-4bcb-99ed-698185ad961efileName"/>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="7e304cfc-9f60-4164-9906-b43e538420d0" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Test Post Request" id="ab8db4c5-5dee-4408-9bdc-b3dd011c71ad" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

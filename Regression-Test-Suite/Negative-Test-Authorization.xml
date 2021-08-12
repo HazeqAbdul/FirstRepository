@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c13cc61c-0fa8-4664-9358-a2121531fe37" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Negative-Test Authorization" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c13cc61c-0fa8-4664-9358-a2121531fe37fileName">Negative-Test-Authorization</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="92a7ef87-e291-445c-a421-251a70c08d47">
+    <con:settings/>
+    <con:config service="CreateAccount" resourcePath="/api/v1/user" methodName="postMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="0b06ecdd-c678-4437-8254-cf86e6f40121" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.test-insurance.com</con:endpoint>
+        <con:request>{
+  "primaryPerson": {
+    "email": "",
+    "title": "",
+    "firstName": "",
+    "lastName": "",
+    "gender": "",
+    "maritalStatus": "",
+    "employmentStatus": "",
+    "dateOfBirth": "",
+    "languagePref": "en"
+  },
+  "primaryPersonMailingAddress": {
+    "addressType": "",
+    "addressLine1": "",
+    "city": "",
+    "state": "",
+    "postalCode": "",
+    "countryCode": ""
+  },
+  "primaryPersonPhone": {
+    "phoneNumber": "",
+    "phoneExtension": "",
+    "phoneTime": "",
+    "phoneType": ""
+  }
+}</con:request>
+        <con:originalUri>https://www.test-insurance.com/api/v1/user</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7a974569-835e-4762-8a7e-1ab58bebe3b3" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="5cdd09fe-6396-446c-b740-abd81a817eb4" name="Response SLA">
+          <con:configuration>
+            <SLA>5000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder>
+          <con:entry>firstName</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request 2" id="55236009-46ce-4eb2-bd1d-4475d50709ed">
+    <con:settings/>
+    <con:config service="CreateAccount" resourcePath="/api/v1/user/{id}" methodName="getMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request 2" id="6c2edbfb-0646-40aa-b772-b7db6b6baf69" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.test-insurance.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://www.test-insurance.com/api/v1/user</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="a173ded4-220c-4aac-9972-61987e30910a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>401</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="76405eec-1c15-493a-91cf-20bafa3d5bc9" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="200"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request 3" id="db65ed91-314e-426e-832d-d70d487cb471">
+    <con:settings/>
+    <con:config service="CreateAccount" resourcePath="/api/v1/user/{id}" methodName="UpdateMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request 3" id="3ef2e8f1-571b-44d3-9a83-ca25972ae2c0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.test-insurance.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://www.test-insurance.com/api/v1/user/200</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7370e6f9-b6a0-4050-9a4c-fb3370339ae0" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>401</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6e6576d4-6ffc-42c3-beae-931c71e12998" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Bearer Token</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="400"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

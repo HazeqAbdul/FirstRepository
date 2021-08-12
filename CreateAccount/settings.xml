@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="f1ef3a34-0661-4147-8ba4-3815ff3a6ba5" name="CreateAccount" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="f1ef3a34-0661-4147-8ba4-3815ff3a6ba5fileName">CreateAccount</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="CreateAccount.json">
+    <con:part>
+      <con:url>CreateAccount.json</con:url>
+      <con:content>{"openapi":"3.0.1","info":{"title":"CreateAccount","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/v1/user/{id}":{"put":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"id","in":"path","required":true,"style":"simple","explode":false}]},"/{id}":{"get":{"responses":{"default":{"description":"Default response"}}},"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"id","in":"path","required":true,"style":"simple","explode":false}]},"/api/v1/user":{"post":{"requestBody":{"content":{"application/json":{"example":"{\n  \"primaryPerson\": {\n    \"email\": \"\",\n    \"title\": \"\",\n    \"firstName\": \"\",\n    \"lastName\": \"\",\n    \"gender\": \"\",\n    \"maritalStatus\": \"\",\n    \"employmentStatus\": \"\",\n    \"dateOfBirth\": \"\",\n    \"languagePref\": \"en\"\n  },\n  \"primaryPersonMailingAddress\": {\n    \"addressType\": \"\",\n    \"addressLine1\": \"\",\n    \"city\": \"\",\n    \"state\": \"\",\n    \"postalCode\": \"\",\n    \"countryCode\": \"\"\n  },\n  \"primaryPersonPhone\": {\n    \"phoneNumber\": \"\",\n    \"phoneExtension\": \"\",\n    \"phoneTime\": \"\",\n    \"phoneType\": \"\"\n  }\n}"}}},"responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"firstName","in":"path","required":true,"style":"simple","explode":false}]},"":{"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://www.test-insurance.com</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="57a47350-c37a-4d45-aa4c-d0c3b23adde5">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>
